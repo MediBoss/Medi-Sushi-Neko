@@ -14,6 +14,8 @@ class GameScene: SKScene {
     var sushiTower: [SushiPiece] = []
     var sushiBasePiece: SushiPiece!
     var feline: Character!
+    var state: GameState = .title
+    var playButton: MSButtonNode!
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
@@ -25,9 +27,17 @@ class GameScene: SKScene {
         
         addTowerPiece(side: .none)
         addRandomSushiPieces(total: 5)
+        
+        playButton = childNode(withName: "playButton") as! MSButtonNode
+        playButton.selectedHandler = {
+            self.state = .ready
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if state == .gameOver || state == .title { return }
+        if state == .ready { state = .playing}
         
         let touch = touches.first!
         let location = touch.location(in: self)

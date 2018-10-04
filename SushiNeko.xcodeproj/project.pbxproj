@@ -74,15 +74,13 @@
 		B8531C492166808C00794328 /* SushiNeko */ = {
 			isa = PBXGroup;
 			children = (
-				B8531C7421669D4600794328 /* Controllers */,
+				B860289D21669EB00030DAFD /* SKS */,
+				B860289C21669EA60030DAFD /* Scene */,
+				B860289B21669E9F0030DAFD /* Controller */,
 				B8531C69216686CA00794328 /* Models */,
 				B8531C64216680B500794328 /* SFX */,
 				B8531C62216680A700794328 /* assets.atlas */,
 				B8531C4A2166808C00794328 /* AppDelegate.swift */,
-				B8531C4C2166808C00794328 /* GameScene.sks */,
-				B8531C4E2166808C00794328 /* Actions.sks */,
-				B8531C502166808C00794328 /* GameScene.swift */,
-				B8531C522166808C00794328 /* GameViewController.swift */,
 				B8531C542166808C00794328 /* Main.storyboard */,
 				B8531C572166808D00794328 /* Assets.xcassets */,
 				B8531C592166808D00794328 /* LaunchScreen.storyboard */,
@@ -111,12 +109,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		B8531C7421669D4600794328 /* Controllers */ = {
+		B860289B21669E9F0030DAFD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B8531C522166808C00794328 /* GameViewController.swift */,
 			);
-			name = Controllers;
-			path = "New Group";
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B860289C21669EA60030DAFD /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B8531C502166808C00794328 /* GameScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		B860289D21669EB00030DAFD /* SKS */ = {
+			isa = PBXGroup;
+			children = (
+				B8531C4C2166808C00794328 /* GameScene.sks */,
+				B8531C4E2166808C00794328 /* Actions.sks */,
+			);
+			path = SKS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
