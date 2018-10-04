@@ -24,6 +24,28 @@ class GameScene: SKScene {
         sushiBasePiece.connectChopsticks()
         
         addTowerPiece(side: .none)
+        addRandomSushiPieces(total: 5)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        let touch = touches.first!
+        let location = touch.location(in: self)
+        if location.x > size.width / 2 {
+            feline.side = .right
+        }else{
+            feline.side = .left
+        }
+        
+        if let firstPiece = sushiTower.first as SushiPiece? {
+            sushiTower.removeFirst()
+            firstPiece.flip(side: feline.side)
+            addRandomSushiPieces(total: 1)
+        }
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        moveTowerDown()
     }
     
     
@@ -47,4 +69,37 @@ class GameScene: SKScene {
         addChild(newPiece)
         sushiTower.append(newPiece)
     }
+    
+    /// Method to add a set number of pieces randomly on the tower
+    func addRandomSushiPieces(total: Int){
+        
+        for _ in 1...total{
+            let lastPiece = sushiTower.last!
+            if lastPiece.side != .none {
+                addTowerPiece(side: .none)
+            } else {
+                let randomNumber = arc4random_uniform(100)
+                if randomNumber < 45 {
+                    addTowerPiece(side: .left)
+                } else if randomNumber < 90 {
+                    addTowerPiece(side: .right)
+                } else {
+                    addTowerPiece(side: .none)
+                }
+            }
+        }
+    }
+    
+    /// Method to move down the tower each time a piece is removed
+    func moveTowerDown(){
+        var n: CGFloat = 0
+        
+        sushiTower.forEach { (piece) in
+            let y = (n * 55) + 215
+            piece.position.y -= (piece.position.y - y) * 0.5
+            n += 1
+        }
+    }
+    
+    
 }

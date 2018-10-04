@@ -10,6 +10,7 @@ import SpriteKit
 
 class Character: SKSpriteNode{
     
+    let punch = SKAction.animate(with: [SKTexture(imageNamed: "character2.png"), SKTexture(imageNamed: "character3.png")], timePerFrame: 0.07, resize: false, restore: true)
     var side: Side = .left{
         didSet{
             if side == .left {
@@ -19,6 +20,7 @@ class Character: SKSpriteNode{
                 xScale = -1
                 position.x = 252
             }
+            run(punch)
         }
     }
     

@@ -20,6 +20,8 @@
 		B8531C682166849000794328 /* SushiPiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8531C672166849000794328 /* SushiPiece.swift */; };
 		B8531C6B216686DC00794328 /* Side.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8531C6A216686DC00794328 /* Side.swift */; };
 		B8531C6D21668A2E00794328 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8531C6C21668A2E00794328 /* Character.swift */; };
+		B8531C7121669CAB00794328 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8531C7021669CAB00794328 /* MSButtonNode.swift */; };
+		B8531C7321669D1C00794328 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8531C7221669D1C00794328 /* GameState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		B8531C672166849000794328 /* SushiPiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SushiPiece.swift; sourceTree = "<group>"; };
 		B8531C6A216686DC00794328 /* Side.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Side.swift; sourceTree = "<group>"; };
 		B8531C6C21668A2E00794328 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		B8531C7021669CAB00794328 /* MSButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
+		B8531C7221669D1C00794328 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		B8531C492166808C00794328 /* SushiNeko */ = {
 			isa = PBXGroup;
 			children = (
+				B8531C7421669D4600794328 /* Controllers */,
 				B8531C69216686CA00794328 /* Models */,
 				B8531C64216680B500794328 /* SFX */,
 				B8531C62216680A700794328 /* assets.atlas */,
@@ -82,6 +87,7 @@
 				B8531C572166808D00794328 /* Assets.xcassets */,
 				B8531C592166808D00794328 /* LaunchScreen.storyboard */,
 				B8531C5C2166808D00794328 /* Info.plist */,
+				B8531C7021669CAB00794328 /* MSButtonNode.swift */,
 			);
 			path = SushiNeko;
 			sourceTree = "<group>";
@@ -100,8 +106,17 @@
 				B8531C672166849000794328 /* SushiPiece.swift */,
 				B8531C6A216686DC00794328 /* Side.swift */,
 				B8531C6C21668A2E00794328 /* Character.swift */,
+				B8531C7221669D1C00794328 /* GameState.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B8531C7421669D4600794328 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controllers;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +197,9 @@
 				B8531C512166808C00794328 /* GameScene.swift in Sources */,
 				B8531C682166849000794328 /* SushiPiece.swift in Sources */,
 				B8531C6B216686DC00794328 /* Side.swift in Sources */,
+				B8531C7121669CAB00794328 /* MSButtonNode.swift in Sources */,
 				B8531C6D21668A2E00794328 /* Character.swift in Sources */,
+				B8531C7321669D1C00794328 /* GameState.swift in Sources */,
 				B8531C532166808C00794328 /* GameViewController.swift in Sources */,
 				B8531C4B2166808C00794328 /* AppDelegate.swift in Sources */,
 			);

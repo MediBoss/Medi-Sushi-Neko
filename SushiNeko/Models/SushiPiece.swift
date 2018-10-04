@@ -42,9 +42,26 @@ class SushiPiece: SKSpriteNode{
         super.init(coder: aDecoder)
     }
     
+    ///Method to connect the chopsticks to the sushi
     func connectChopsticks() {
         rightChopstick = childNode(withName: "rightChopstick") as? SKSpriteNode
         leftChopstick = childNode(withName: "leftChopstick") as? SKSpriteNode
         side = .none
+    }
+    
+    func flip(side: Side){
+        var actionName: String = ""
+        if side == .left {
+            actionName = "FlipRight"
+        } else if side == .right {
+            actionName = "FlipRight"
+        }
+        
+        let flip = SKAction(named: actionName)!
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([flip,remove])
+        
+        run(sequence)
+        
     }
 }
